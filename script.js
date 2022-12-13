@@ -4,6 +4,7 @@ console.log("It's going down.");
 // Get a choice from the computer
 //  - initialize commputerSelection variable
 //  - randomly assign rock, paper, or scissors to commputerSelection
+
 function getComputerChoice() {
     let commputerChoice = Math.random()
         
@@ -21,10 +22,6 @@ function getComputerChoice() {
     }
 }
 
-//let playerSelection //= prompt("Choose your weapon carefully. (rock, paper, or scissors)");
-  // console.log("player chose " + playerSelection);
-//let computerSelection //= getComputerChoice();
-   // console.log("Computer chose " + computerSelection);
 
 // Get a selection from the player
 //Get a selection from the computer
@@ -42,7 +39,7 @@ function getComputerChoice() {
 //      when computer has paper return win
 //      when computer has scissors return tie
 
-    let playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+    let playerSelection = "rock"//prompt("Choose your weapon carefully. (rock, paper, or scissors)");
     console.log("player chose " + playerSelection);
     let computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection);
@@ -52,37 +49,52 @@ function playRound(playerSelection, computerSelection) {
 
    if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection === "rock") {
-            return "You butt heads with another rock and agree to disagree, get ready for another round.";
+            console.log("You butt heads with another rock and agree to disagree, get ready for another round.");
+            return "T";
         }
         else if (computerSelection === "paper") {
-            return "The horizon darkens. Slowly the light is cut off further and further up the sky until all is black. You have been covered by paper.";
+            console.log("The horizon darkens. Slowly the light is cut off further and further up the sky until all is black. You have been covered by paper.");
+            return "L";
         }
         else {
-            return "You stand over the remains of your adversary, scissors has been crushed by your might.";
+            console.log("You stand over the remains of your adversary, scissors has been crushed by your might.");
+            return "W";
         }}
 
     else if (playerSelection.toLowerCase() === "paper") {
         if (computerSelection === "rock") {
-            return "You have engulfed your foe in an inescapable cage, rock will never see the light of day again.";
+            console.log("You have engulfed your foe in an inescapable cage, rock will never see the light of day again.");
+            return "W";
         }
         else if (computerSelection === "paper") {
-            return "Just two pieces of paper. It is very anticlimactic.";
+            console.log("Just two pieces of paper. It is very anticlimactic.");
+            return "T";
         }
         else {
-            return "The pain! The pain!!! Scissors chops and slices you until tiny fragments of your once promising life are all that remain.";
-    } }
+            console.log("The pain! The pain!!! Scissors chops and slices you until tiny fragments of your once promising life are all that remain.");
+            return "L";
+        } }
     
     else {
         if (computerSelection === "rock") {
-            return "BANG!! Before you know what hit you, you are broken in two. You will never sciss again.";
+            console.log("BANG!! Before you know what hit you, you are broken in two. You will never sciss again.");
+            return "L";
         }
         else if (computerSelection === "paper") {
-            return "Ahhhh the cathartic feeling of blade slicing with ease. Paper never stood a chance.";
+            console.log("Ahhhh the cathartic feeling of blade slicing with ease. Paper never stood a chance.");
+            return "W";
         }
         else {
-            return "What is this? Another scissors? Suddenly you realize that fighting is all you've ever known, and maybe there is more out there.  The other scissors approaches you, seemingly having similar thougths. 'I'm Sci,' you say, unsure why.  'I'm Ssors,' they reply.  You notice Ssors has a beauty you've never witnessed before, and another peculiar quality that can only be described as a pleasant aura. You decide to take a risk and propose to Ssors.  Ssors blushes and looks down, before looking back up to catch your gaze.  'Yes,' says Ssors with a jubilant smile. 'Yes, Yes, a million times YES!'. Shocked and in awe at the unexpected development in your life, you choose to stop fighting, at least for the day.";
-    }}
+            console.log("What is this? Another scissors? Suddenly you realize that fighting is all you've ever known, and maybe there is more out there.  The other scissors approaches you, seemingly having similar thougths. 'I'm Sci,' you say, unsure why.  'I'm Ssors,' they reply.  You notice Ssors has a beauty you've never witnessed before, and another peculiar quality that can only be described as a pleasant aura. You decide to take a risk and propose to Ssors.  Ssors blushes and looks down, before looking back up to catch your gaze.  'Yes,' says Ssors with a jubilant smile. 'Yes, Yes, a million times YES!'. Shocked and in awe at the unexpected development in your life, you choose to stop fighting, at least for the day.");
+            return "T";
+        }}
 }
 
-console.log(playRound(playerSelection,computerSelection));
+//Run the playRound funtion
+//determine a winner
+//add score to a tally for either player or computer
+//once either player or comp reach 5 wins, end the game
 
+for (let i = 0; i < 5; i++) {
+
+}
