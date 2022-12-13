@@ -21,10 +21,10 @@ function getComputerChoice() {
     }
 }
 
-//let playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
-//    console.log("player chose " + playerSelection);
-//let computerSelection = getComputerChoice();
-//    console.log("Computer chose " + computerSelection);
+//let playerSelection //= prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+  // console.log("player chose " + playerSelection);
+//let computerSelection //= getComputerChoice();
+   // console.log("Computer chose " + computerSelection);
 
 // Get a selection from the player
 //Get a selection from the computer
@@ -41,14 +41,13 @@ function getComputerChoice() {
 //      when computer has rock return lose
 //      when computer has paper return win
 //      when computer has scissors return tiec
-function playRound() {
-    
-    let playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+function playRound(playerSelection, computerSelection) {
+    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
     console.log("player chose " + playerSelection);
-    let computerSelection = getComputerChoice();
+    computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection);
 
-   if (playerSelection.toLowerCase === "rock") {
+   if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection === "rock") {
             return "You butt heads with another rock and agree to disagree, get ready for another round.";
         }
@@ -59,7 +58,7 @@ function playRound() {
             return "You stand over the remains of your adversary, scissors has been crushed by your might.";
         }}
 
-    else if (playerSelection.toLowerCase === "paper") {
+    else if (playerSelection.toLowerCase() === "paper") {
         if (computerSelection === "rock") {
             return "You have engulfed your foe in an inescapable cage, rock will never see the light of day again.";
         }
