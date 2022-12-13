@@ -15,15 +15,15 @@ function getComputerChoice() {
     let commputerChoice = Math.random()
         
     if (commputerChoice <= 1/3) {
-        console.log("rock");
+        //console.log("rock");
         return "rock";
     }
     else if (commputerChoice <= 2/3) {
-        console.log("paper");
+        //console.log("paper");
         return "paper";
     }
     else {
-        console.log("scissors");
+        //console.log("scissors");
         return "scissors";
     }
 }
@@ -47,10 +47,9 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
    
-    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
-    console.log("player chose " + playerSelection);
-    computerSelection = getComputerChoice();
-    console.log("Computer chose " + computerSelection);
+    //playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+    //computerSelection = getComputerChoice();
+    
 
    if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection === "rock") {
@@ -92,8 +91,9 @@ function playRound(playerSelection, computerSelection) {
         else {
             console.log("What is this? Another scissors? Suddenly you realize that fighting is all you've ever known, and maybe there is more out there.  The other scissors approaches you, seemingly having similar thougths. 'I'm Sci,' you say, unsure why.  'I'm Ssors,' they reply.  You notice Ssors has a beauty you've never witnessed before, and another peculiar quality that can only be described as a pleasant aura. You decide to take a risk and propose to Ssors.  Ssors blushes and looks down, before looking back up to catch your gaze.  'Yes,' says Ssors with a jubilant smile. 'Yes, Yes, a million times YES!'. Shocked and in awe at the unexpected development in your life, you choose to stop fighting, at least for the day.");
             return "T";
-        }}
-}
+        }}}
+    
+
 
 //Run the playRound funtion
 //determine a winner
@@ -103,19 +103,26 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 
 for (let i = 0; i < 5; i++) {
-    
+
+    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+    while (playerSelection.toLowerCase() !== "rock" && playerSelection.toLowerCase() !== "paper" && playerSelection.toLowerCase() !== "scissors") 
+        { playerSelection = prompt("Your incompetence will be your downfall. Choose a better option. (rock, paper, or scissors)") }
+
+
+    computerSelection = getComputerChoice();
+
     tally = playRound(playerSelection,computerSelection);
 
     if (tally === "W") {
         playerScore++;
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`);
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`);
     }
     else if (tally === "L"){
         computerScore++;
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`)
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`)
     }
     else {
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`)
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`)
     }
     }
 
