@@ -40,19 +40,22 @@ function getComputerChoice() {
 //if player selects scissors
 //      when computer has rock return lose
 //      when computer has paper return win
-//      when computer has scissors return tiec
-function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+//      when computer has scissors return tie
+
+    let playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
     console.log("player chose " + playerSelection);
-    computerSelection = getComputerChoice();
+    let computerSelection = getComputerChoice();
     console.log("Computer chose " + computerSelection);
+
+function playRound(playerSelection, computerSelection) {
+   
 
    if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection === "rock") {
             return "You butt heads with another rock and agree to disagree, get ready for another round.";
         }
         else if (computerSelection === "paper") {
-            return "The horizon darkens. Slowly the light is cut off further and further up the sky until all is black. /n You have been covered by paper.";
+            return "The horizon darkens. Slowly the light is cut off further and further up the sky until all is black. You have been covered by paper.";
         }
         else {
             return "You stand over the remains of your adversary, scissors has been crushed by your might.";
@@ -81,5 +84,5 @@ function playRound(playerSelection, computerSelection) {
     }}
 }
 
-console.log(playRound());
+console.log(playRound(playerSelection,computerSelection));
 
