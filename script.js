@@ -5,6 +5,12 @@ console.log("It's going down.");
 //  - initialize commputerSelection variable
 //  - randomly assign rock, paper, or scissors to commputerSelection
 
+let playerScore = 0;
+let computerScore = 0;
+let tally;
+let playerSelection;
+let computerSelection;
+
 function getComputerChoice() {
     let commputerChoice = Math.random()
         
@@ -39,13 +45,12 @@ function getComputerChoice() {
 //      when computer has paper return win
 //      when computer has scissors return tie
 
-    let playerSelection = "rock"//prompt("Choose your weapon carefully. (rock, paper, or scissors)");
-    console.log("player chose " + playerSelection);
-    let computerSelection = getComputerChoice();
-    console.log("Computer chose " + computerSelection);
-
 function playRound(playerSelection, computerSelection) {
    
+    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+    console.log("player chose " + playerSelection);
+    computerSelection = getComputerChoice();
+    console.log("Computer chose " + computerSelection);
 
    if (playerSelection.toLowerCase() === "rock") {
         if (computerSelection === "rock") {
@@ -95,6 +100,29 @@ function playRound(playerSelection, computerSelection) {
 //add score to a tally for either player or computer
 //once either player or comp reach 5 wins, end the game
 
+function game() {
+
 for (let i = 0; i < 5; i++) {
+    
+    tally = playRound(playerSelection,computerSelection);
+
+    if (tally === "W") {
+        playerScore++;
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`);
+    }
+    else if (tally === "L"){
+        computerScore++;
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`)
+    }
+    else {
+        console.log(`You have ${playerScore} points, and your rival has ${computerScore}`)
+    }
+    }
+
+    if (playerScore > computerScore) {console.log("You have won the war.  One day you'll tell your grandkids. Woo.")}
+    else if (playerScore < computerScore) {console.log("....you're dead. Have fun with that.")}
+    else { console.log("Truly a battle for the ages.  You have met your match. Like Gilgamesh and Enkidu, you and computer will now become friends and fight your battles as allies, not foes.")}
 
 }
+
+game();
