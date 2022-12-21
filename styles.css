@@ -1,0 +1,36 @@
+body {
+    background-color: forestgreen;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    padding: 60px;
+    justify-content: center;
+}
+
+.rock, .paper, .scissors {
+    font-size: 40px;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+.rock {
+    color: whitesmoke;
+    background-color: brown;
+}
+
+.paper {
+    color: black;
+    background-color: white;
+}
+
+.scissors {
+    color: whitesmoke;
+    background-color: darkgrey;
+}
+
