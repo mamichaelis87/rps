@@ -1,10 +1,6 @@
         
 console.log("It's going down.");
 
-// Get a choice from the computer
-//  - initialize commputerSelection variable
-//  - randomly assign rock, paper, or scissors to commputerSelection
-
 let playerScore = 0;
 let computerScore = 0;
 let tally;
@@ -71,26 +67,9 @@ function getComputerChoice() {
     }
 }
 
-
-// Get a selection from the player
-//Get a selection from the computer
-//compare player selection and computer choice
-//if player selects rock 
-//      when computer has rock return tie
-//      when computer has paper return lose
-//      when computer has scissors return win
-//if player selects paper
-//      when computer has rock return win
-//      when computer has paper return tie
-//      when computer has scissors return lose
-//if player selects scissors
-//      when computer has rock return lose
-//      when computer has paper return win
-//      when computer has scissors return tie
-
 function playRound(playerSelection, computerSelection) {
    
-    //playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
+   
     computerSelection = getComputerChoice();
     
 
@@ -135,45 +114,3 @@ function playRound(playerSelection, computerSelection) {
             results.textContent="What is this? Another scissors? Suddenly you realize that fighting is all you've ever known, and maybe there is more out there.  The other scissors approaches you, seemingly having similar thougths. 'I'm Sci,' you say, unsure why.  'I'm Ssors,' they reply.  You notice Ssors has a beauty you've never witnessed before, and another peculiar quality that can only be described as a pleasant aura. You decide to take a risk and propose to Ssors.  Ssors blushes and looks down, before looking back up to catch your gaze.  'Yes,' says Ssors with a jubilant smile. 'Yes, Yes, a million times YES!'. Shocked and in awe at the unexpected development in your life, you choose to stop fighting, at least for the day.";
             return "T";
         }}}
-    
-
-
-//Run the playRound funtion
-//determine a winner
-//add score to a tally for either player or computer
-//once either player or comp reach 5 wins, end the game
-
-/*function game() {
-
-for (let i = 0; i < 5; i++) {
-
-    playerSelection = prompt("Choose your weapon carefully. (rock, paper, or scissors)");
-    while (playerSelection.toLowerCase() !== "rock" && playerSelection.toLowerCase() !== "paper" && playerSelection.toLowerCase() !== "scissors") 
-        { playerSelection = prompt("Your incompetence will be your downfall. Choose a better option. (rock, paper, or scissors)") }
-
-
-    computerSelection = getComputerChoice();
-
-    tally = playRound(playerSelection,computerSelection);
-
-    if (tally === "W") {
-        playerScore++;
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`);
-    }
-    else if (tally === "L"){
-        computerScore++;
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`)
-    }
-    else {
-        console.log(`You have ${playerScore} points, and your rival has ${computerScore}.`)
-    }
-    }
-
-    if (playerScore > computerScore) {console.log("You have won the war.  One day you'll tell your grandkids. Woo.")}
-    else if (playerScore < computerScore) {console.log("....you're dead. Have fun with that.")}
-    else { console.log("Truly a battle for the ages.  You have met your match. Like Gilgamesh and Enkidu, you and computer will now become friends and fight your battles as allies, not foes.")}
-
-}*/
-
-//game();
-
