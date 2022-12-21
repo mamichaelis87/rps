@@ -34,3 +34,22 @@ h1 {
     background-color: darkgrey;
 }
 
+.notes-container {
+    display: flex;
+    justify-content: center;
+}
+.notes {
+    color: whitesmoke;
+    background-color: darkgreen;
+    border-color: burlywood;
+    border-width: 4px;
+    border-style: solid;
+    padding: 40px;
+}
+
+.results, .gameScore, .endGame {
+    padding: 20px;
+    max-width: 500px;
+    font-size: 18px;
+}
+
