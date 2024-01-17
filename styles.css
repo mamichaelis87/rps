@@ -1,5 +1,6 @@
 body {
     background-color: forestgreen;
+    margin: 0;
 }
 
 h1, h2, h3, p {
@@ -13,25 +14,29 @@ h3 {
 
 .game-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .choice-container {
     display: flex;
+    justify-content: start;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    width: 300px;
 }
 
 .buttons {
     display: flex;
-    padding: 20px;
-    justify-content: center;
-    align-items: start;
-    width: 30%;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .rock, .paper, .scissors {
     font-size: 20px;
-    margin: 10px;
     padding: 10px 15px;
 }
 
@@ -59,16 +64,17 @@ h3 {
 .results-container {
     display: flex;
     justify-content: center;
-    width: 35%;
+    width: 400px;
     align-items: start;
+    margin-bottom: 20px;
 }
 
 .progress-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-    margin-left: 20px;
+    width: 300px;
+    margin: 0 20px 0 20px;
     align-items: start;
 }
 
@@ -78,16 +84,21 @@ h3 {
     border-color: burlywood;
     border-width: 4px;
     border-style: solid;
-    padding: 20px;
+    padding: 10px;
+    width: 100%;
 }
 
-.results, .user-score, .comp-score {
+.user-score, .comp-score {
     padding: 20px;
     max-width: 500px;
     font-size: 18px;
 }
 
-.progress-container h3 {
+.results {
+    font-size: 18px;
+}
+
+.progress-container h3, .results-container h3 {
     margin-bottom: 20px;
 }
 
