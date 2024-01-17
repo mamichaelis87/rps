@@ -7,16 +7,21 @@ h1 {
     text-align: center;
 }
 
+.game-container {
+    display: flex;
+}
+
 .buttons {
     display: flex;
-    padding: 60px;
+    padding: 20px;
     justify-content: center;
+    align-items: end;
 }
 
 .rock, .paper, .scissors {
-    font-size: 40px;
-    margin: 20px;
-    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 15px;
 }
 
 .rock {
@@ -34,7 +39,7 @@ h1 {
     background-color: darkgrey;
 }
 
-.notes-container {
+.results-container {
     display: flex;
     justify-content: center;
 }
