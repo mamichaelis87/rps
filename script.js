@@ -10,14 +10,16 @@ const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const results = document.querySelector(".results");
-const gameScore = document.querySelector(".gameScore");
+const userScore = document.querySelector(".userScore");
+const compScore = document.querySelector(".compScore")
 const endGame = document.querySelector(".endGame");
 
 rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
     if (tally === "W") {playerScore++;}
     else if (tally === "L") {computerScore++}
-    gameScore.textContent = `You: ${playerScore}    Your Enemy: ${computerScore}`;
+    userScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Your Enemy: ${computerScore}`;
     checkForWinner();
     });
 
@@ -25,7 +27,9 @@ paperBtn.addEventListener('click', () => {
     tally = playRound('paper', computerSelection)
     if (tally === "W") {playerScore++}
     else if (tally === "L") {computerScore++}
-    gameScore.textContent = `You have ${playerScore} points, and your rival has ${computerScore}.`;
+    userScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Your Enemy: ${computerScore}`;
+    checkForWinner();
     checkForWinner();
 });
 
@@ -33,7 +37,9 @@ scissorsBtn.addEventListener('click', () => {
     tally = playRound('scissors', computerSelection)
     if (tally === "W") {playerScore++}
     else if (tally === "L") {computerScore++}
-    gameScore.textContent = `You have ${playerScore} points, and your rival has ${computerScore}.`;
+    userScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Your Enemy: ${computerScore}`;
+    checkForWinner();
     checkForWinner();
 });
 
@@ -113,4 +119,6 @@ function playRound(playerSelection, computerSelection) {
         else {
             results.textContent="What is this? Another scissors? Suddenly you realize that fighting is all you've ever known, and maybe there is more out there.  The other scissors approaches you, seemingly having similar thougths. 'I'm Sci,' you say, unsure why.  'I'm Ssors,' they reply.  You notice Ssors has a beauty you've never witnessed before, and another peculiar quality that can only be described as a pleasant aura. You decide to take a risk and propose to Ssors.  Ssors blushes and looks down, before looking back up to catch your gaze.  'Yes,' says Ssors with a jubilant smile. 'Yes, Yes, a million times YES!'. Shocked and in awe at the unexpected development in your life, you choose to stop fighting, at least for the day.";
             return "T";
-        }}}
+        }
+    }
+}
