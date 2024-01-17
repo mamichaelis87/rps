@@ -17,7 +17,7 @@ rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
     if (tally === "W") {playerScore++;}
     else if (tally === "L") {computerScore++}
-    gameScore.textContent = `You have ${playerScore} points, and your rival has ${computerScore}.`;
+    gameScore.textContent = `You: ${playerScore}    Your Enemy: ${computerScore}`;
     checkForWinner();
     });
 
