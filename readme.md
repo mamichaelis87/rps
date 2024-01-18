@@ -3,4 +3,4 @@ be found here -
 
 Features to add:
   start screen animations
-  journey mode (choose a fighter, and fight a series of foes)
+  journey mode (choose a fighter, and combat a series of foes)
