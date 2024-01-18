@@ -23,6 +23,9 @@ const badPaper = document.querySelector(".bad-paper");
 const goodScissors = document.querySelector(".good-scissors");
 const badScissors = document.querySelector(".bad-scissors");
 const matchupImages = document.getElementsByClassName("matchup-image");
+const coverImage = document.querySelector(".cover-image");
+const resultsContainer = document.querySelector(".results-container");
+const progressContainer = document.querySelector(".progress-container")
 
 rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
@@ -192,6 +195,10 @@ function newGame() {
     for (const button of fighterButtons) {
         button.disabled = false;
     }
+    coverImage.style.display = "none"
+    resultsContainer.style.display = "block"
+    progressContainer.style.display = "block"
+    newGameBtn.textContent = "New Game"
 }
 
 newGameBtn.addEventListener('click', () => {newGame()})
