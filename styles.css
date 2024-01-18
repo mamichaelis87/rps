@@ -59,16 +59,9 @@ h3 {
     padding: 10px 15px;
 }
 
-.rock {
-    background-color: transparent;
-}
-
-.paper {
-    background-color: transparent;
-}
-
-.scissors {
-    background-color: transparent;
+.rock, .paper, .scissors {
+    background-color: darkgreen;
+    border-color: burlywood;
 }
 
 .fighter img {
