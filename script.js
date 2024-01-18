@@ -1,5 +1,6 @@
-        
 console.log("It's going down.");
+
+// set variables
 
 let playerScore = 0;
 let computerScore = 0;
@@ -25,6 +26,8 @@ const badScissors = document.querySelector(".bad-scissors");
 const matchupImages = document.getElementsByClassName("matchup-image");
 const coverImage = document.querySelector(".cover-image");
 const gameContainer = document.querySelector(".game-container")
+
+// set event listeners for buttons
 
 rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
@@ -52,6 +55,10 @@ scissorsBtn.addEventListener('click', () => {
     compScore.textContent = `Your Enemy: ${computerScore}`;
     checkForWinner();
 });
+
+newGameBtn.addEventListener('click', () => {newGame()})
+
+// define functions for gameplay
 
 function clearMatchupHistory() {
     let child = matchupHistory.lastElementChild;
@@ -81,15 +88,12 @@ function getComputerChoice() {
     let commputerChoice = Math.random()
         
     if (commputerChoice <= 1/3) {
-        //console.log("rock");
         return "rock";
     }
     else if (commputerChoice <= 2/3) {
-        //console.log("paper");
         return "paper";
     }
     else {
-        //console.log("scissors");
         return "scissors";
     }
 }
@@ -201,5 +205,3 @@ function newGame() {
     gameContainer.style.display = "flex"
     newGameBtn.textContent = "New Game"
 }
-
-newGameBtn.addEventListener('click', () => {newGame()})
