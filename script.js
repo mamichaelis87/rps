@@ -94,27 +94,27 @@ function getComputerChoice() {
 
 function updateMatchup(playerSelection, compSelection, result) {
     for (const image of matchupImages) {
-        image.style.visibility = "hidden";
+        image.style.display = "none";
     }
 
     if (playerSelection === "rock") {
-        goodRock.style.visibility = "visible";
+        goodRock.style.display = "block";
     }
     else if (playerSelection === "paper") {
-        goodPaper.style.visibility = "visible";
+        goodPaper.style.display = "block";
     }
     else if (playerSelection === "scissors") {
-        goodScissors.style.visibility = "visible";
+        goodScissors.style.display = "block";
     }
 
     if (compSelection === "rock") {
-        badRock.style.visibility = "visible";
+        badRock.style.display = "block";
     }
     else if (compSelection === "paper") {
-        badPaper.style.visibility = "visible";
+        badPaper.style.display = "block";
     }
     else if (compSelection === "scissors") {
-        badScissors.style.visibility = "visible";
+        badScissors.style.display = "block";
     }
 
     matchup = document.createElement("div");
