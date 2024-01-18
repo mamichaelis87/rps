@@ -76,6 +76,10 @@ h3 {
     width: 150px;
 }
 
+.cover-image img {
+    width: 500px;
+}
+
 .results-container {
     display: flex;
     justify-content: center;
