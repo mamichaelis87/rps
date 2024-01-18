@@ -51,18 +51,19 @@ h3 {
 }
 
 .rock {
-    color: whitesmoke;
-    background-color: brown;
+    background-color: transparent;
 }
 
 .paper {
-    color: black;
-    background-color: white;
+    background-color: transparent;
 }
 
 .scissors {
-    color: whitesmoke;
-    background-color: darkgrey;
+    background-color: transparent;
+}
+
+.fighter img {
+    width: 100%;
 }
 
 .matchup {
