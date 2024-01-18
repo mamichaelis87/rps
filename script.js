@@ -13,11 +13,16 @@ const results = document.querySelector(".results");
 const userScore = document.querySelector(".userScore");
 const compScore = document.querySelector(".compScore")
 const endGame = document.querySelector(".endGame");
-const userFighter = document.querySelector(".user-fighter");
-const compFighter = document.querySelector(".comp-fighter");
 const matchupHistory = document.querySelector(".matchup-history")
 const newGameBtn = document.querySelector(".new-game")
 const fighterButtons = document.getElementsByClassName("fighter");
+const goodRock = document.querySelector(".good-rock");
+const badRock = document.querySelector(".bad-rock");
+const goodPaper = document.querySelector(".good-paper");
+const badPaper = document.querySelector(".bad-paper");
+const goodScissors = document.querySelector(".good-scissors");
+const badScissors = document.querySelector(".bad-scissors");
+const matchupImages = document.getElementsByClassName("matchup-image");
 
 rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
@@ -88,8 +93,30 @@ function getComputerChoice() {
 }
 
 function updateMatchup(playerSelection, compSelection, result) {
-    userFighter.textContent = playerSelection;
-    compFighter.textContent = compSelection;
+    for (const image of matchupImages) {
+        image.style.visibility = "hidden";
+    }
+
+    if (playerSelection === "rock") {
+        goodRock.style.visibility = "visible";
+    }
+    else if (playerSelection === "paper") {
+        goodPaper.style.visibility = "visible";
+    }
+    else if (playerSelection === "scissors") {
+        goodScissors.style.visibility = "visible";
+    }
+
+    if (compSelection === "rock") {
+        badRock.style.visibility = "visible";
+    }
+    else if (compSelection === "paper") {
+        badPaper.style.visibility = "visible";
+    }
+    else if (compSelection === "scissors") {
+        badScissors.style.visibility = "visible";
+    }
+
     matchup = document.createElement("div");
     matchup.textContent = playerSelection + " vs. " + compSelection + " " + `(${result})`;
     matchupHistory.appendChild(matchup);
@@ -161,8 +188,6 @@ function newGame() {
     userScore.textContent = `You: ${playerScore}`;
     compScore.textContent = `Your Enemy: ${computerScore}`;
     results.textContent = ""
-    userFighter.textContent = ""
-    compFighter.textContent = ""
     clearMatchupHistory();
     for (const button of fighterButtons) {
         button.disabled = false;
