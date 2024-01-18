@@ -7,14 +7,17 @@
         <link rel="stylesheet" href ="styles.css">
     </head>
     <body>
-        <h1>Good luck, kid.</h1>
+        <div class="header">
+            <h1>Good luck, kid.</h1>
+            <button class="new-game">New Game</button>
+        </div>
         <div class="game-container">
             <div class="choice-container">
                 <h2>Choose your fighter:</h2>
                 <div class = buttons>
-                    <button class="rock">Rock</button>
-                    <button class="paper">Paper</button>
-                    <button class="scissors">Scissors</button>
+                    <button class="rock fighter">Rock</button>
+                    <button class="paper fighter">Paper</button>
+                    <button class="scissors fighter">Scissors</button>
                 </div>
                 <div class="matchup-container">
                     <h3>Matchup</h3>
@@ -36,8 +39,8 @@
                 <div class="notes">
                     <h3>Battle Log</h3>
                     <p>First to 5 wins the war.</p>
-                    <div class="userScore"></div>
-                    <div class="compScore"></div>
+                    <div class="userScore">You: </div>
+                    <div class="compScore">Your Enemy: </div>
                     <div class="endGame"></div>
                     <p>Matchup History:</p>
                     <div class="matchup-history"></div>

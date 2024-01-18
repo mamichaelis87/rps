@@ -16,6 +16,8 @@ const endGame = document.querySelector(".endGame");
 const userFighter = document.querySelector(".user-fighter");
 const compFighter = document.querySelector(".comp-fighter");
 const matchupHistory = document.querySelector(".matchup-history")
+const newGameBtn = document.querySelector(".new-game")
+const fighterButtons = document.getElementsByClassName("fighter");
 
 rockBtn.addEventListener('click', () => {
     tally = playRound('rock', computerSelection);
@@ -54,16 +56,16 @@ function clearMatchupHistory() {
 
 function checkForWinner() {
     if(playerScore === 5) {
-        playerScore = 0;
-        computerScore = 0;
+        for (const button of fighterButtons) {
+            button.disabled = true;
+        }
         endGame.textContent = "You have won the war.  One day you'll tell your grandkids. Woo. (choose a weapon to fight another computer)";
-        clearMatchupHistory();
     }
     else if (computerScore === 5) {
-        playerScore = 0;
-        computerScore = 0;
+        for (const button of fighterButtons) {
+            button.disabled = true;
+        }
         endGame.textContent = "....you're dead. Have fun with that. (choose a weapon to fight in another life)";
-        clearMatchupHistory();
     }
     else {endGame.textContent = null}
 }
@@ -152,3 +154,19 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+
+function newGame() {
+    playerScore = 0;
+    computerScore = 0;
+    userScore.textContent = `You: ${playerScore}`;
+    compScore.textContent = `Your Enemy: ${computerScore}`;
+    results.textContent = ""
+    userFighter.textContent = ""
+    compFighter.textContent = ""
+    clearMatchupHistory();
+    for (const button of fighterButtons) {
+        button.disabled = false;
+    }
+}
+
+newGameBtn.addEventListener('click', () => {newGame()})
