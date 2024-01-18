@@ -59,13 +59,13 @@ function checkForWinner() {
         for (const button of fighterButtons) {
             button.disabled = true;
         }
-        endGame.textContent = "You have won the war.  One day you'll tell your grandkids. Woo. (choose a weapon to fight another computer)";
+        endGame.textContent = "You have won the war.  One day you'll tell your grandkids. Woo.";
     }
     else if (computerScore === 5) {
         for (const button of fighterButtons) {
             button.disabled = true;
         }
-        endGame.textContent = "....you're dead. Have fun with that. (choose a weapon to fight in another life)";
+        endGame.textContent = "....you're dead. Have fun with that.";
     }
     else {endGame.textContent = null}
 }
