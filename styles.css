@@ -81,10 +81,7 @@ h3 {
 }
 
 .results-container {
-    display: flex;
-    justify-content: center;
     width: 400px;
-    align-items: start;
     margin-bottom: 20px;
 }
 
@@ -105,7 +102,7 @@ h3 {
     border-width: 4px;
     border-style: solid;
     padding: 10px;
-    width: 100%;
+    width: calc(100% - 20px - 8px);
 }
 
 .user-score, .comp-score {
