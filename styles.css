@@ -69,7 +69,11 @@ h3 {
 .matchup {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+.matchup img {
+    width: 150px;
 }
 
 .results-container {
@@ -116,7 +120,7 @@ h3 {
 
 footer {
     margin-top: auto;
-    width: calc(100vw - 40px);
+    width: calc(100vw - 60px);
     display: flex;
     justify-content: space-between;
     padding: 20px;
